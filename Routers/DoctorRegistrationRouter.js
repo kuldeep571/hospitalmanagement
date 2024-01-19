@@ -22,6 +22,6 @@ router.get('/:id', getsingle);
 
 router.delete('/:id', deletedata);
 
-router.put('/:id', updatedata);
+router.put('/:id', upload.single("image"), uploadedcloudinaryImages, updatedata);
 
 module.exports = router;
