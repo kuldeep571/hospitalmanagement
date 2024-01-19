@@ -8,7 +8,9 @@ const {
     getdata,
     getsingle,
     deletedata,
-    Putdata
+    Putdata,
+    active,
+    inactive
 } = require("../Controllers/AddDoctorsController");
 
 const router = express.Router();
@@ -17,6 +19,10 @@ const router = express.Router();
 router.post('/', upload.single("image"), uploadedcloudinaryImages, postdata);
 
 router.put('/:id', upload.single("image"), uploadedcloudinaryImages, Putdata);
+
+router.get('/active', active);
+
+router.get('/inactive', inactive);
 
 router.get('/', getdata);
 

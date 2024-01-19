@@ -11,7 +11,8 @@ const postdata = async (req, res) => {
             fees,
             qualification,
             address,
-            about
+            about,
+            status
         } = req.body
 
         const existing = await db.findOne({ email });
@@ -33,6 +34,7 @@ const postdata = async (req, res) => {
                 qualification,
                 address,
                 about,
+                status,
                 image: img,
                 // ...req.body
             }
@@ -106,7 +108,8 @@ const Putdata = async (req, res) => {
             fees,
             qualification,
             address,
-            about
+            about,
+            status
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -121,6 +124,7 @@ const Putdata = async (req, res) => {
                     qualification,
                     address,
                     about,
+                    status,
                     image: uploadedImages,
                 },
             }
@@ -131,11 +135,47 @@ const Putdata = async (req, res) => {
     }
 };
 
+const active = async (req, res) => {
+    try {
+        const findalldata = await db.find({status: true});
+        res.status(200).json({
+            success: true,
+            findalldata,
+            message: "Get All Doctors Data",
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error"
+        });
+    }
+};
+
+const inactive = async (req, res) => {
+    try {
+        const findalldata = await db.find({status: false});
+        res.status(200).json({
+            success: true,
+            findalldata,
+            message: "Get All Doctors Data",
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error"
+        });
+    }
+};
+
 
 module.exports = {
     postdata,
     getdata,
     getsingle,
     deletedata,
-    Putdata
+    Putdata,
+    active,
+    inactive
 }
