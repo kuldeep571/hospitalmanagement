@@ -9,7 +9,7 @@ const postdata = async (req, res) => {
 
         const img = req.uploadedImageUrl
         const count = await db.countDocuments();
-        const generatedID = `SERIAL${(count + 1).toString().padStart(4, '0')}`;
+        const generatedID = `${(count + 1).toString().padStart(4, '0')}`;
         const insertdata = await db.create(
             {
                 name,
