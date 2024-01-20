@@ -16,9 +16,9 @@ router.post('/', postdata);
 
 router.get('/', getdata);
 
-router.get('/getTodayData', getTodayData);
+router.get('/gettoday', getTodayData);
 
-router.get('/getYesterdayData', getYesterdayData);
+router.get('/getyesterday', getYesterdayData);
 
 // router.get('/getupcoming', getUpcomingData)
 
