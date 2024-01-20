@@ -13,7 +13,6 @@ const {
 
 const router = express.Router();
 
-
 router.post('/', upload.single("image"), uploadedcloudinaryImages, postdata);
 
 router.get('/', getdata);

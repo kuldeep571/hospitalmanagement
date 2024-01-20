@@ -6,7 +6,8 @@ const {
     getsingle,
     deletedata,
     getTodayData,
-    putdata
+    putdata,
+    getYesterdayData
 } = require("../Controllers/AddAppoinmentController");
 
 const router = express.Router();
@@ -15,7 +16,9 @@ router.post('/', postdata);
 
 router.get('/', getdata);
 
-router.get('/getdataDate', getTodayData);
+router.get('/getTodayData', getTodayData);
+
+router.get('/getYesterdayData', getYesterdayData);
 
 // router.get('/getupcoming', getUpcomingData)
 

@@ -55,8 +55,6 @@ const getTodayData = async (req, res) => {
             currentDate.getMonth(),
             currentDate.getDate()
         );
-
-        // Find all data where the 'date' is greater than or equal to the start of today
         const todayData = await db.find({ date: { $gte: startOfToday } });
 
         res.status(200).json({
@@ -73,12 +71,48 @@ const getTodayData = async (req, res) => {
     }
 };
 
+const getYesterdayData = async (req, res) => {
+    try {
+        const currentDate = new Date();
+
+        // Calculate the start of yesterday
+        const startOfYesterday = new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth(),
+            currentDate.getDate() - 1,
+            0, 0, 0, 0
+        );
+
+        // Calculate the end of yesterday
+        const endOfYesterday = new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth(),
+            currentDate.getDate(),
+            0, 0, 0, 0
+        );
+
+        const yesterdayData = await db.find({
+            date: { $gte: startOfYesterday, $lt: endOfYesterday }
+        });
+
+        res.status(200).json({
+            success: true,
+            yesterdayData,
+            message: "Get yesterday's data",
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error",
+        });
+    }
+};
+
+
 const getUpcomingData = async (req, res) => {
     try {
-        // Get the current timestamp
         const currentTimestamp = Date.now();
-
-        // Find all documents with 'date' greater than the current timestamp
         const upcomingData = await db.find({ date: { $gt: currentTimestamp } }).sort({ date: 1 });
 
         res.status(200).json({
@@ -171,5 +205,6 @@ module.exports = {
     deletedata,
     getTodayData,
     getUpcomingData,
-    putdata
+    putdata,
+    getYesterdayData
 }
