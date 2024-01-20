@@ -8,6 +8,7 @@ const postdata = async (req, res) => {
             description,
             category,
             rating,
+            brand,
             image,
         } = req.body
         // const img = req.uploadedImageUrl
@@ -18,6 +19,7 @@ const postdata = async (req, res) => {
                 description,
                 category,
                 rating,
+                brand,
                 image,
             }
         );
@@ -66,6 +68,7 @@ const Putdata = async (req, res) => {
             description,
             category,
             rating,
+            brand,
             image,
         } = req.body;
         let data = await db.updateMany(
@@ -77,6 +80,7 @@ const Putdata = async (req, res) => {
                     description,
                     category,
                     rating,
+                    brand,
                     image,
                 },
             }
