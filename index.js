@@ -25,6 +25,9 @@ app.use("/api/appoinment", require("./Routers/AddAppoinmentRouter"));
 
 app.use("/api/departments", require("./Routers/departmentsRouter"));
 
+app.use("/api/products", require("./Routers/ProductsRouter"));
+
+
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
 });
