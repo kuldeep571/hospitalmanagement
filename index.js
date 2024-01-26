@@ -31,6 +31,14 @@ app.use("/api/finecart", require("./Routers/FinecartRouter"));
 
 app.use("/api/newpro", require("./Routers/NewProRouter"));
 
+app.use("/api/newpro1", require("./Routers/NewPro1Router"));
+
+app.use("/api/newpro2", require("./Routers/NewPro2Router"));
+
+app.use("/api/newpro3", require("./Routers/NewPro3Router"));
+
+app.use("/api/newpro4", require("./Routers/NewPro4Router"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
