@@ -3,9 +3,10 @@ const db = require("../Models/FinecartModel");
 const postdata = async (req, res) => {
     try {
         const {
-            title,
+            name,
             price,
             description,
+            brand,
             category,
             rating,
             image,
@@ -13,9 +14,10 @@ const postdata = async (req, res) => {
 
         const insertdata = await db.create(
             {
-                title,
+                name,
                 price,
                 description,
+                brand,
                 category,
                 rating,
                 image,
@@ -60,7 +62,7 @@ const deletedata = async (req, res) => {
 const Putdata = async (req, res) => {
     try {
         const {
-            title,
+            name,
             price,
             description,
             category,
@@ -72,7 +74,7 @@ const Putdata = async (req, res) => {
             { _id: req.params.id },
             {
                 $set: {
-                    title,
+                    name,
                     price,
                     description,
                     category,

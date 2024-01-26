@@ -5,12 +5,16 @@ const ProductSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    title: {
+    name: {
         type: String,
         required: true,
     },
     price: {
         type: Number,
+        required: true,
+    },
+    brand: {
+        type: String,
         required: true,
     },
     description: {
@@ -22,14 +26,8 @@ const ProductSchema = mongoose.Schema({
         required: true,
     },
     rating: {
-        rate: {
-            type: Number,
-            required: true,
-        },
-        count: {
-            type: Number,
-            required: true,
-        },
+        type: String,
+        required: true,
     },
 
 }, { timestamps: true })
