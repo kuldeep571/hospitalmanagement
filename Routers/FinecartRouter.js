@@ -1,8 +1,4 @@
 const express = require('express');
-const multer = require('multer');
-// const storage = multer.memoryStorage();
-// const upload = multer({storage: storage})
-// const uploadedcloudinaryImages = require('../Middlewares/singleImgUpload')
 const {
     postdata,
     getdata,
@@ -10,7 +6,7 @@ const {
     deletedata,
     Putdata,
     getPaginatedData
-} = require("../Controllers/ProductsController");
+} = require("../Controllers/FinecartController");
 
 const router = express.Router();
 

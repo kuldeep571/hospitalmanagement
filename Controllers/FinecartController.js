@@ -1,4 +1,4 @@
-const db = require("../Models/ProductsModel");
+const db = require("../Models/FinecartModel");
 
 const postdata = async (req, res) => {
     try {
@@ -8,10 +8,9 @@ const postdata = async (req, res) => {
             description,
             category,
             rating,
-            brand,
             image,
         } = req.body
-        // const img = req.uploadedImageUrl
+
         const insertdata = await db.create(
             {
                 title,
@@ -19,7 +18,6 @@ const postdata = async (req, res) => {
                 description,
                 category,
                 rating,
-                brand,
                 image,
             }
         );
@@ -61,7 +59,6 @@ const deletedata = async (req, res) => {
 
 const Putdata = async (req, res) => {
     try {
-        // const uploadedImages = req.uploadedImageUrl;
         const {
             title,
             price,

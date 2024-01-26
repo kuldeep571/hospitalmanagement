@@ -27,6 +27,8 @@ app.use("/api/departments", require("./Routers/departmentsRouter"));
 
 app.use("/api/products", require("./Routers/ProductsRouter"));
 
+app.use("/api/finecart", require("./Routers/FinecartRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
