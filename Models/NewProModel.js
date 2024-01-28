@@ -26,7 +26,7 @@ const newproSchema = mongoose.Schema({
         required: true,
     },
     price: {
-        type: Number,
+        type: String,
         required: true,
     },
     brand: {
@@ -42,7 +42,7 @@ const newproSchema = mongoose.Schema({
         required: true,
     },
     cuttedprice: {
-        type: Number,
+        type: String,
         required: true,
     },
     modelName:{
