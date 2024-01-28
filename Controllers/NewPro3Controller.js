@@ -10,6 +10,14 @@ const postdata = async (req, res) => {
             category,
             cuttedprice,
             image,
+            image1,
+            image2,
+            image3,
+            image4,
+            modelName,
+            style,
+            colour,
+            screenSize,
         } = req.body
 
         const insertdata = await db.create(
@@ -21,6 +29,14 @@ const postdata = async (req, res) => {
                 category,
                 cuttedprice,
                 image,
+                image1,
+                image2,
+                image3,
+                image4,
+                modelName,
+                style,
+                colour,
+                screenSize,
             }
         );
         res.status(200).json(insertdata);
@@ -65,10 +81,18 @@ const Putdata = async (req, res) => {
             name,
             price,
             description,
+            brand,
             category,
             cuttedprice,
-            brand,
             image,
+            image1,
+            image2,
+            image3,
+            image4,
+            modelName,
+            style,
+            colour,
+            screenSize,
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -77,10 +101,18 @@ const Putdata = async (req, res) => {
                     name,
                     price,
                     description,
+                    brand,
                     category,
                     cuttedprice,
-                    brand,
                     image,
+                    image1,
+                    image2,
+                    image3,
+                    image4,
+                    modelName,
+                    style,
+                    colour,
+                    screenSize,
                 },
             }
         );
@@ -93,7 +125,7 @@ const Putdata = async (req, res) => {
 const getPaginatedData = async (req, res) => {
     try {
         const page = req.query.page || 1;
-        const pageSize = req.query.pageSize || 10; 
+        const pageSize = req.query.pageSize || 10;
         const skip = (page - 1) * pageSize;
 
         // Fetch data from the database with pagination

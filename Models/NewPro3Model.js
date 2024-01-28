@@ -5,6 +5,22 @@ const newproSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    image1: {
+        type: String,
+        required: true,
+    },
+    image2: {
+        type: String,
+        required: true,
+    },
+    image3: {
+        type: String,
+        required: true,
+    },
+    image4: {
+        type: String,
+        required: true,
+    },
     name: {
         type: String,
         required: true,
@@ -29,6 +45,22 @@ const newproSchema = mongoose.Schema({
         type: Number,
         required: true,
     },
+    modelName:{
+        type: String,
+        required:true,
+    },
+    style:{
+        type: String,
+        required:true,
+    },
+    colour:{
+        type: String,
+        required:true,
+    },
+    screenSize:{
+        type: String,
+        required:true,
+    }
 
 }, { timestamps: true })
 
