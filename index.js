@@ -39,6 +39,10 @@ app.use("/api/newpro3", require("./Routers/NewPro3Router"));
 
 app.use("/api/newpro4", require("./Routers/NewPro4Router"));
 
+app.use("/api/cartitem", require("./Routers/CartItemRouter"));
+
+app.use("/api/badandbath", require("./Routers/BadAndBathRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
