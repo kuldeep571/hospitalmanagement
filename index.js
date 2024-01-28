@@ -43,6 +43,8 @@ app.use("/api/cartitem", require("./Routers/CartItemRouter"));
 
 app.use("/api/badandbath", require("./Routers/BadAndBathRouter"));
 
+app.use("/api/tablet", require("./Routers/TabletRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
