@@ -7,7 +7,6 @@ const newproSchema = mongoose.Schema({
     },
     video: {
         type: String,
-        required: true,
     },
     image1: {
         type: String,
