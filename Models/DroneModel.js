@@ -5,6 +5,10 @@ const droneSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    rating: {
+        type: String,
+        required: true,
+    },
     video: {
         type: String,
     },

@@ -1,4 +1,4 @@
-const db = require("../Models/NewPro2Model");
+const db = require("../Models/DroneModel");
 
 const postdata = async (req, res) => {
     try {
@@ -10,6 +10,7 @@ const postdata = async (req, res) => {
             category,
             cuttedprice,
             image,
+            rating,
             video,
             image1,
             image2,
@@ -30,6 +31,7 @@ const postdata = async (req, res) => {
                 category,
                 cuttedprice,
                 image,
+                rating,
                 video,
                 image1,
                 image2,
@@ -87,6 +89,7 @@ const Putdata = async (req, res) => {
             category,
             cuttedprice,
             image,
+            rating,
             video,
             image1,
             image2,
@@ -108,6 +111,7 @@ const Putdata = async (req, res) => {
                     category,
                     cuttedprice,
                     image,
+                    rating,
                     video,
                     image1,
                     image2,
@@ -126,29 +130,10 @@ const Putdata = async (req, res) => {
     }
 };
 
-const getPaginatedData = async (req, res) => {
-    try {
-        const page = req.query.page || 1;
-        const pageSize = req.query.pageSize || 10;
-        const skip = (page - 1) * pageSize;
-
-        // Fetch data from the database with pagination
-        const data = await db.find()
-            .skip(skip)
-            .limit(pageSize);
-
-        res.status(200).json(data);
-    } catch (error) {
-        res.status(500).json(error);
-    }
-};
-
-
 module.exports = {
     postdata,
     getdata,
     getsingle,
     deletedata,
-    Putdata,
-    getPaginatedData
+    Putdata
 }

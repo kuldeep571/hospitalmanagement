@@ -5,6 +5,9 @@ const cartitemSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    rating: {
+        type: String,
+    },
     video: {
         type: String,
     },
