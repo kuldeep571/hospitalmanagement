@@ -45,6 +45,8 @@ app.use("/api/badandbath", require("./Routers/BadAndBathRouter"));
 
 app.use("/api/tablet", require("./Routers/TabletRouter"));
 
+app.use("/api/drone", require("./Routers/DroneRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);

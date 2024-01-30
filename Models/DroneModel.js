@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const newproSchema = mongoose.Schema({
+const droneSchema = mongoose.Schema({
 
     image: {
         type: String,
@@ -40,10 +40,6 @@ const newproSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    rating:{
-        type: String,
-        required:true,
-    },
     category: {
         type: String,
         required: true,
@@ -71,4 +67,4 @@ const newproSchema = mongoose.Schema({
 
 }, { timestamps: true })
 
-module.exports = mongoose.model('newpro1', newproSchema);
+module.exports = mongoose.model('drone', droneSchema);

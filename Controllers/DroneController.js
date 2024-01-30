@@ -1,4 +1,4 @@
-const db = require("../Models/NewPro1Model");
+const db = require("../Models/NewPro2Model");
 
 const postdata = async (req, res) => {
     try {
@@ -10,7 +10,6 @@ const postdata = async (req, res) => {
             category,
             cuttedprice,
             image,
-            rating,
             video,
             image1,
             image2,
@@ -31,7 +30,6 @@ const postdata = async (req, res) => {
                 category,
                 cuttedprice,
                 image,
-                rating,
                 video,
                 image1,
                 image2,
@@ -89,7 +87,6 @@ const Putdata = async (req, res) => {
             category,
             cuttedprice,
             image,
-            rating,
             video,
             image1,
             image2,
@@ -112,7 +109,6 @@ const Putdata = async (req, res) => {
                     cuttedprice,
                     image,
                     video,
-                    rating,
                     image1,
                     image2,
                     image3,
