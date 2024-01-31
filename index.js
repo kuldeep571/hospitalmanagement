@@ -49,6 +49,8 @@ app.use("/api/drone", require("./Routers/DroneRouter"));
 
 app.use("/api/cloth", require("./Routers/ClothingRouter"));
 
+app.use("/api/bikeandcloth", require("./Routers/BikeAndScootyRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
