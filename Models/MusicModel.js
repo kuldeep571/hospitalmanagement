@@ -71,7 +71,9 @@ const MusicSchema = mongoose.Schema({
     specialFeature:{
         type: String,
     },
-
+    about_this_item:{
+        type: String,
+    }
 
 }, { timestamps: true })
 
