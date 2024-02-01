@@ -56,18 +56,23 @@ const MusicSchema = mongoose.Schema({
         type: String,
         required:true,
     },
-    style:{
+    watt:{
         type: String,
-        required:true,
     },
     colour:{
         type: String,
         required:true,
     },
-    screenSize:{
+    material:{
         type: String,
-        required:true,
-    }
+    },
+    skillLevel	:{
+        type: String,
+    },
+    specialFeature:{
+        type: String,
+    },
+
 
 }, { timestamps: true })
 

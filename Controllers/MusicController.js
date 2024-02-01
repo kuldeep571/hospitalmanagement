@@ -17,9 +17,11 @@ const postdata = async (req, res) => {
             image3,
             image4,
             modelName,
-            style,
+            skillLevel,
+            specialFeature,
+            watt,
             colour,
-            screenSize,
+            material,
         } = req.body
 
         const insertdata = await db.create(
@@ -38,9 +40,11 @@ const postdata = async (req, res) => {
                 image3,
                 image4,
                 modelName,
-                style,
+                skillLevel,
+                specialFeature,
+                watt,
                 colour,
-                screenSize,
+                material,
             }
         );
         res.status(200).json(insertdata);
@@ -96,9 +100,11 @@ const Putdata = async (req, res) => {
             image3,
             image4,
             modelName,
-            style,
+            skillLevel,
+            specialFeature,
+            watt,
             colour,
-            screenSize,
+            material,
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -118,9 +124,11 @@ const Putdata = async (req, res) => {
                     image3,
                     image4,
                     modelName,
-                    style,
+                    skillLevel,
+                    specialFeature,
+                    watt,
                     colour,
-                    screenSize,
+                    material,
                 },
             }
         );
