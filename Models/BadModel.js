@@ -67,6 +67,9 @@ const BadSchema = mongoose.Schema({
     screenSize:{
         type: String,
         required:true,
+    },
+    material:{
+        type: String,
     }
 
 }, { timestamps: true })
