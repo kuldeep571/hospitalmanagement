@@ -57,6 +57,8 @@ app.use("/api/bad", require("./Routers/BadRouter"));
 
 app.use("/api/software", require("./Routers/SoftwareRouter"));
 
+app.use("/api/music", require("./Routers/MusicRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
