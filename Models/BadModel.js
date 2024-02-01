@@ -52,10 +52,6 @@ const BadSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    modelName:{
-        type: String,
-        required:true,
-    },
     style:{
         type: String,
         required:true,
@@ -70,7 +66,11 @@ const BadSchema = mongoose.Schema({
     },
     material:{
         type: String,
+    },
+    about_this_item:{
+        type: String,
     }
+
 
 }, { timestamps: true })
 
