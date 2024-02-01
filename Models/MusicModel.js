@@ -54,7 +54,6 @@ const MusicSchema = mongoose.Schema({
     },
     modelName:{
         type: String,
-        required:true,
     },
     watt:{
         type: String,
