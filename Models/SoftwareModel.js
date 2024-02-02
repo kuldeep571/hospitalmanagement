@@ -52,14 +52,6 @@ const SoftwareSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    modelName:{
-        type: String,
-        required:true,
-    },
-    style:{
-        type: String,
-        required:true,
-    },
     colour:{
         type: String,
         required:true,
