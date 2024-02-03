@@ -61,6 +61,8 @@ app.use("/api/music", require("./Routers/MusicRouter"));
 
 app.use("/api/bath", require("./Routers/BathRouter"));
 
+app.use("/api/superadmin", require("./Routers/SuperAbminRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
