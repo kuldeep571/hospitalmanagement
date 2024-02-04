@@ -61,7 +61,6 @@ const musicscooterSchema = mongoose.Schema({
     },
     material:{
         type: String,
-        required:true,
     },
     about_this_item:{
         type: String,
