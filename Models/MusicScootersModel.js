@@ -55,10 +55,6 @@ const musicscooterSchema = mongoose.Schema({
     modelName:{
         type: String,
     },
-    style:{
-        type: String,
-        required:true,
-    },
     colour:{
         type: String,
         required:true,
