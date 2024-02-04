@@ -54,7 +54,6 @@ const ProfessionalAudioBrandSchema = mongoose.Schema({
     },
     modelName:{
         type: String,
-        required:true,
     },
     style:{
         type: String,
