@@ -66,7 +66,6 @@ const ProfessionalAudioBrandSchema = mongoose.Schema({
     },
     screenSize:{
         type: String,
-        required:true,
     },
     about_this_item:{
         type: String,
