@@ -19,7 +19,7 @@ const postdata = async (req, res) => {
             modelName,
             style,
             colour,
-            screenSize,
+            operatingSystem,
             about_this_item,
         } = req.body
 
@@ -41,7 +41,7 @@ const postdata = async (req, res) => {
                 modelName,
                 style,
                 colour,
-                screenSize,
+                operatingSystem,
                 about_this_item,
             }
         );
@@ -100,7 +100,7 @@ const Putdata = async (req, res) => {
             modelName,
             style,
             colour,
-            screenSize,
+            operatingSystem,
             about_this_item,
         } = req.body;
         let data = await db.updateMany(
@@ -123,7 +123,7 @@ const Putdata = async (req, res) => {
                     modelName,
                     style,
                     colour,
-                    screenSize,
+                    operatingSystem,
                     about_this_item,
                 },
             }

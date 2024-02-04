@@ -64,9 +64,8 @@ const PersonalComputerSchema = mongoose.Schema({
         type: String,
         required:true,
     },
-    screenSize:{
+    operatingSystem:{
         type: String,
-        required:true,
     },
     about_this_item:{
         type: String,
