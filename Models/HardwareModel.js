@@ -58,7 +58,6 @@ const hardwareSchema = mongoose.Schema({
     },
     style:{
         type: String,
-        required:true,
     },
     colour:{
         type: String,
@@ -66,7 +65,6 @@ const hardwareSchema = mongoose.Schema({
     },
     screenSize:{
         type: String,
-        required:true,
     },
     about_this_item:{
         type: String,
