@@ -58,7 +58,6 @@ const PersonalComputerSchema = mongoose.Schema({
     },
     style:{
         type: String,
-        required:true,
     },
     colour:{
         type: String,
