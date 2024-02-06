@@ -58,6 +58,9 @@ const computerserverSchema = mongoose.Schema({
     compatibleDevices:{
         type: String,
     },
+    modelName:{
+        type: String,
+    },
     colour:{
         type: String,
         required:true,
