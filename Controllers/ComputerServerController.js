@@ -21,7 +21,12 @@ const postdata = async (req, res) => {
             compatibleDevices,
             colour,
             screenSize,
-                about_this_item,
+            about_this_item,
+            powerSupply,
+            warranty,
+            processor,
+            hardDrive,
+
         } = req.body
 
         const insertdata = await db.create(
@@ -45,6 +50,10 @@ const postdata = async (req, res) => {
                 colour,
                 screenSize,
                 about_this_item,
+                powerSupply,
+                warranty,
+                processor,
+                hardDrive,
             }
         );
         res.status(200).json(insertdata);
@@ -105,6 +114,10 @@ const Putdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            powerSupply,
+            warranty,
+            processor,
+            hardDrive,
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -117,8 +130,8 @@ const Putdata = async (req, res) => {
                     category,
                     cuttedprice,
                     image,
-                    video,
                     rating,
+                    video,
                     image1,
                     image2,
                     image3,
@@ -129,6 +142,10 @@ const Putdata = async (req, res) => {
                     colour,
                     screenSize,
                     about_this_item,
+                    powerSupply,
+                    warranty,
+                    processor,
+                    hardDrive,
                 },
             }
         );

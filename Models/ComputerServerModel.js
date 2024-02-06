@@ -61,6 +61,18 @@ const computerserverSchema = mongoose.Schema({
     modelName:{
         type: String,
     },
+    powerSupply:{
+        type: String,
+    },
+    warranty:{
+        type: String,
+    },
+    processor:{
+        type: String,
+    },
+    hardDrive:{
+        type: String,
+    },
     colour:{
         type: String,
         required:true,
