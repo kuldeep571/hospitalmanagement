@@ -65,7 +65,7 @@ app.use("/api/superadmin", require("./Routers/SuperAbminRouter"));
 
 app.use("/api/musicscooters", require("./Routers/MusicScootersRouter"));
 
-app.use("/api/coumputerserver", require("./Routers/ComputerServerRouter"));
+app.use("/api/computerserver", require("./Routers/ComputerServerRouter"));
 
 app.use("/api/hardware", require("./Routers/HardwareRouter"));
 

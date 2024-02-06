@@ -21,7 +21,7 @@ const postdata = async (req, res) => {
             compatibleDevices,
             colour,
             screenSize,
-            about_this_item,
+                about_this_item,
         } = req.body
 
         const insertdata = await db.create(
