@@ -52,10 +52,10 @@ const computerserverSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    modelName:{
+    itemWeight:{
         type: String,
     },
-    style:{
+    compatibleDevices:{
         type: String,
     },
     colour:{
