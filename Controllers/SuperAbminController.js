@@ -43,7 +43,13 @@ const login = async (req, res) => {
 
     const user = await User.findOne({ email });
 
-    if (!user || !(await user.comparePassword(password))) {
+    if (!user) {
+      return res.status(401).json({ error: 'User not found' });
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
@@ -56,7 +62,7 @@ const login = async (req, res) => {
         role: user.role,
       },
     };
-
+    
     const token = generateToken(user);
     res.json({ token, ...loginResponse });
   } catch (error) {
