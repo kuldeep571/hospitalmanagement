@@ -51,23 +51,38 @@ const newproSchema = mongoose.Schema({
         type: Number,
         required: true,
     },
-    modelName:{
+    modelName: {
         type: String,
-        required:true,
+        required: true,
     },
-    style:{
+    style: {
         type: String,
-        required:true,
+        required: true,
     },
-    colour:{
+    colour: {
         type: String,
-        required:true,
+        required: true,
     },
-    screenSize:{
+    screenSize: {
         type: String,
-        required:true,
+        required: true,
     },
-    about_this_item:{
+    about_this_item: {
+        type: String,
+    },
+    product_dimensions: {
+        type: String,
+    },
+    hash_memory_type: {
+        type: String,
+    },
+    operating_sysyem: {
+        type: String,
+    },
+    mounting_hardware: {
+        type: String,
+    },
+    special_teatures: {
         type: String,
     }
 

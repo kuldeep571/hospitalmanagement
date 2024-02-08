@@ -21,6 +21,11 @@ const postdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            product_dimensions,
+            hash_memory_type,
+            operating_sysyem,
+            mounting_hardware,
+            special_teatures
         } = req.body
 
         const insertdata = await db.create(
@@ -31,9 +36,9 @@ const postdata = async (req, res) => {
                 brand,
                 category,
                 cuttedprice,
-                image,
-                rating,
                 video,
+                rating,
+                image,
                 image1,
                 image2,
                 image3,
@@ -43,6 +48,11 @@ const postdata = async (req, res) => {
                 colour,
                 screenSize,
                 about_this_item,
+                product_dimensions,
+                hash_memory_type,
+                operating_sysyem,
+                mounting_hardware,
+                special_teatures
             }
         );
         res.status(200).json(insertdata);
@@ -90,9 +100,9 @@ const Putdata = async (req, res) => {
             brand,
             category,
             cuttedprice,
-            image,
-            rating,
             video,
+            rating,
+            image,
             image1,
             image2,
             image3,
@@ -102,6 +112,11 @@ const Putdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            product_dimensions,
+            hash_memory_type,
+            operating_sysyem,
+            mounting_hardware,
+            special_teatures
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -113,9 +128,9 @@ const Putdata = async (req, res) => {
                     brand,
                     category,
                     cuttedprice,
-                    image,
-                    rating,
                     video,
+                    rating,
+                    image,
                     image1,
                     image2,
                     image3,
@@ -125,6 +140,11 @@ const Putdata = async (req, res) => {
                     colour,
                     screenSize,
                     about_this_item,
+                    product_dimensions,
+                    hash_memory_type,
+                    operating_sysyem,
+                    mounting_hardware,
+                    special_teatures
                 },
             }
         );
