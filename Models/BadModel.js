@@ -69,8 +69,22 @@ const BadSchema = mongoose.Schema({
     },
     about_this_item:{
         type: String,
-    }
-
+    },
+    manufacturer:{
+        type: String,
+    },
+    item_weight:{
+        type: String,
+    },
+    product_dimensions:{
+        type: String,
+    },
+    special_feature:{
+        type: String,
+    },
+    finish_type:{
+        type: String,
+    },
 
 }, { timestamps: true })
 
