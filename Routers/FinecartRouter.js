@@ -5,7 +5,6 @@ const {
     getsingle,
     deletedata,
     Putdata,
-    getPaginatedData
 } = require("../Controllers/FinecartController");
 
 const router = express.Router();
@@ -19,7 +18,5 @@ router.get('/', getdata);
 router.get('/:id', getsingle);
 
 router.delete('/:id', deletedata);
-
-router.get('/paginated', getPaginatedData);
 
 module.exports = router;

@@ -66,6 +66,33 @@ const ProductSchema = mongoose.Schema({
     },
     about_this_item:{
         type: String,
+    },
+    manufacturer:{
+        type: String,
+    },
+    asin:{
+        type: String,
+    },
+    voltage:{
+        type: String,
+    },
+    item_weight:{
+        type: String,
+    },
+    special_feature:{
+        type: String,
+    },
+    speaker_type:{
+        type: String,
+    },
+    wattage:{
+        type: String,
+    },
+    standing_screen_display_size:{
+        type: String,
+    },
+    aspect_ratio:{
+        type: String,
     }
 
 }, { timestamps: true })

@@ -20,6 +20,15 @@ const postdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            manufacturer,
+            asin,
+            voltage,
+            item_weight,
+            special_feature,
+            speaker_type,
+            wattage,
+            standing_screen_display_size,
+            aspect_ratio,
         } = req.body
 
         const insertdata = await db.create(
@@ -41,6 +50,15 @@ const postdata = async (req, res) => {
                 colour,
                 screenSize,
                 about_this_item,
+                manufacturer,
+                asin,
+                voltage,
+                item_weight,
+                special_feature,
+                speaker_type,
+                wattage,
+                standing_screen_display_size,
+                aspect_ratio,
             }
         );
         res.status(200).json(insertdata);
@@ -99,51 +117,52 @@ const Putdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            manufacturer,
+            asin,
+            voltage,
+            item_weight,
+            special_feature,
+            speaker_type,
+            wattage,
+            standing_screen_display_size,
+            aspect_ratio,
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
             {
                 $set: {
                     name,
-                    price,
-                    description,
-                    brand,
-                    category,
-                    rating,
-                    image,
-                    video,
-                    image1,
-                    image2,
-                    image3,
-                    image4,
-                    modelName,
-                    style,
-                    colour,
-                    screenSize,
-                    about_this_item,
+            price,
+            description,
+            brand,
+            category,
+            rating,
+            image,
+            video,
+            image1,
+            image2,
+            image3,
+            image4,
+            modelName,
+            style,
+            colour,
+            screenSize,
+            about_this_item,
+            manufacturer,
+            asin,
+            voltage,
+            item_weight,
+            special_feature,
+            speaker_type,
+            wattage,
+            standing_screen_display_size,
+            aspect_ratio,
                 },
             }
         );
         res.status(200).json(data);
     } catch (error) {
         res.status(404).send(error.message);
-    }
-};
-
-const getPaginatedData = async (req, res) => {
-    try {
-        const page = req.query.page || 1;
-        const pageSize = req.query.pageSize || 10;
-        const skip = (page - 1) * pageSize;
-
-        // Fetch data from the database with pagination
-        const data = await db.find()
-            .skip(skip)
-            .limit(pageSize);
-
-        res.status(200).json(data);
-    } catch (error) {
-        res.status(500).json(error);
     }
 };
 
@@ -154,5 +173,4 @@ module.exports = {
     getsingle,
     deletedata,
     Putdata,
-    getPaginatedData
 }
