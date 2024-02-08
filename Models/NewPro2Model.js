@@ -69,6 +69,39 @@ const newproSchema = mongoose.Schema({
     },
     about_this_item:{
         type: String,
+    },
+    processor_brand:{
+        type: String,
+    },
+    processor_type:{
+        type: String,
+    },
+    processor_speed:{
+        type: String,
+    },
+    processor_count:{
+        type: String,
+    },
+    ram_size:{
+        type: String,
+    },
+    memory_technology:{
+        type: String,
+    },
+    maximum_memory_supported:{
+        type: String,
+    },
+    graphics_chipset_brand:{
+        type: String,
+    },
+    graphics_card_description:{
+        type: String,
+    },
+    graphics_ram_type:{
+        type: String,
+    },
+    graphics_card_interface:{
+        type: String,
     }
 
 }, { timestamps: true })

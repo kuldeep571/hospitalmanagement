@@ -21,6 +21,17 @@ const postdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            processor_brand,
+            processor_type,
+            processor_speed,
+            processor_count,
+            ram_size,
+            memory_technology,
+            maximum_memory_supported,
+            graphics_chipset_brand,
+            graphics_card_description,
+            graphics_ram_type,
+            graphics_card_interface
         } = req.body
 
         const insertdata = await db.create(
@@ -43,6 +54,17 @@ const postdata = async (req, res) => {
                 colour,
                 screenSize,
                 about_this_item,
+                processor_brand,
+                processor_type,
+                processor_speed,
+                processor_count,
+                ram_size,
+                memory_technology,
+                maximum_memory_supported,
+                graphics_chipset_brand,
+                graphics_card_description,
+                graphics_ram_type,
+                graphics_card_interface
             }
         );
         res.status(200).json(insertdata);
@@ -102,6 +124,17 @@ const Putdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            processor_brand,
+            processor_type,
+            processor_speed,
+            processor_count,
+            ram_size,
+            memory_technology,
+            maximum_memory_supported,
+            graphics_chipset_brand,
+            graphics_card_description,
+            graphics_ram_type,
+            graphics_card_interface
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -125,6 +158,17 @@ const Putdata = async (req, res) => {
                     colour,
                     screenSize,
                     about_this_item,
+                    processor_brand,
+                    processor_type,
+                    processor_speed,
+                    processor_count,
+                    ram_size,
+                    memory_technology,
+                    maximum_memory_supported,
+                    graphics_chipset_brand,
+                    graphics_card_description,
+                    graphics_ram_type,
+                    graphics_card_interface
                 },
             }
         );
