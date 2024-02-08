@@ -70,6 +70,21 @@ const newproSchema = mongoose.Schema({
     },
     about_this_item:{
         type: String,
+    },
+    material:{
+        type: String,
+    },
+    weight:{
+        type: String,
+    },
+    product_dimensions:{
+        type: String,
+    },
+    country_of_origin:{
+        type: String,
+    },
+    special_feature:{
+        type: String,
     }
 
 }, { timestamps: true })

@@ -21,6 +21,11 @@ const postdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            material,
+            weight,
+            product_dimensions,
+            country_of_origin,
+            special_feature,
         } = req.body
 
         const insertdata = await db.create(
@@ -43,6 +48,11 @@ const postdata = async (req, res) => {
                 colour,
                 screenSize,
                 about_this_item,
+                material,
+                weight,
+                product_dimensions,
+                country_of_origin,
+                special_feature,
             }
         );
         res.status(200).json(insertdata);
@@ -102,6 +112,11 @@ const Putdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            material,
+            weight,
+            product_dimensions,
+            country_of_origin,
+            special_feature,
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -114,8 +129,8 @@ const Putdata = async (req, res) => {
                     category,
                     cuttedprice,
                     image,
-                    video,
                     rating,
+                    video,
                     image1,
                     image2,
                     image3,
@@ -125,6 +140,11 @@ const Putdata = async (req, res) => {
                     colour,
                     screenSize,
                     about_this_item,
+                    material,
+                    weight,
+                    product_dimensions,
+                    country_of_origin,
+                    special_feature,
                 },
             }
         );
