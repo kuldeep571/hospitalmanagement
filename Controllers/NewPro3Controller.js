@@ -22,7 +22,7 @@ const postdata = async (req, res) => {
             screenSize,
             about_this_item,
             product_dimensions,
-            hash_memory_type,
+            fash_memory_type,
             operating_sysyem,
             mounting_hardware,
             special_teatures
@@ -49,7 +49,7 @@ const postdata = async (req, res) => {
                 screenSize,
                 about_this_item,
                 product_dimensions,
-                hash_memory_type,
+                fash_memory_type,
                 operating_sysyem,
                 mounting_hardware,
                 special_teatures
@@ -113,7 +113,7 @@ const Putdata = async (req, res) => {
             screenSize,
             about_this_item,
             product_dimensions,
-            hash_memory_type,
+            fash_memory_type,
             operating_sysyem,
             mounting_hardware,
             special_teatures
@@ -141,7 +141,7 @@ const Putdata = async (req, res) => {
                     screenSize,
                     about_this_item,
                     product_dimensions,
-                    hash_memory_type,
+                    fash_memory_type,
                     operating_sysyem,
                     mounting_hardware,
                     special_teatures

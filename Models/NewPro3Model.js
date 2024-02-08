@@ -73,7 +73,7 @@ const newproSchema = mongoose.Schema({
     product_dimensions: {
         type: String,
     },
-    hash_memory_type: {
+    fash_memory_type: {
         type: String,
     },
     operating_sysyem: {
