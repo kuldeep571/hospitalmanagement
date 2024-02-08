@@ -29,6 +29,8 @@ const postdata = async (req, res) => {
             wattage,
             standing_screen_display_size,
             aspect_ratio,
+            memory_storage_capacity,
+            ram_memory_installed_size
         } = req.body
 
         const insertdata = await db.create(
@@ -59,6 +61,8 @@ const postdata = async (req, res) => {
                 wattage,
                 standing_screen_display_size,
                 aspect_ratio,
+                memory_storage_capacity,
+                ram_memory_installed_size
             }
         );
         res.status(200).json(insertdata);
@@ -126,37 +130,41 @@ const Putdata = async (req, res) => {
             wattage,
             standing_screen_display_size,
             aspect_ratio,
+            memory_storage_capacity,
+            ram_memory_installed_size
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
             {
                 $set: {
                     name,
-            price,
-            description,
-            brand,
-            category,
-            rating,
-            image,
-            video,
-            image1,
-            image2,
-            image3,
-            image4,
-            modelName,
-            style,
-            colour,
-            screenSize,
-            about_this_item,
-            manufacturer,
-            asin,
-            voltage,
-            item_weight,
-            special_feature,
-            speaker_type,
-            wattage,
-            standing_screen_display_size,
-            aspect_ratio,
+                    price,
+                    description,
+                    brand,
+                    category,
+                    rating,
+                    image,
+                    video,
+                    image1,
+                    image2,
+                    image3,
+                    image4,
+                    modelName,
+                    style,
+                    colour,
+                    screenSize,
+                    about_this_item,
+                    manufacturer,
+                    asin,
+                    voltage,
+                    item_weight,
+                    special_feature,
+                    speaker_type,
+                    wattage,
+                    standing_screen_display_size,
+                    aspect_ratio,
+                    memory_storage_capacity,
+                    ram_memory_installed_size
                 },
             }
         );

@@ -93,6 +93,12 @@ const ProductSchema = mongoose.Schema({
     },
     aspect_ratio:{
         type: String,
+    },
+    memory_storage_capacity:{
+        type: String,
+    },
+    ram_memory_installed_size:{
+        type: String,
     }
 
 }, { timestamps: true })
