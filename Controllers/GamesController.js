@@ -21,6 +21,10 @@ const postdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            type_of_item,
+            manufacturer,
+            asin,
+            date_first_available,
         } = req.body
 
         const insertdata = await db.create(
@@ -43,6 +47,10 @@ const postdata = async (req, res) => {
                 colour,
                 screenSize,
                 about_this_item,
+                type_of_item,
+                manufacturer,
+                asin,
+                date_first_available,
             }
         );
         res.status(200).json(insertdata);
@@ -102,6 +110,10 @@ const Putdata = async (req, res) => {
             colour,
             screenSize,
             about_this_item,
+            type_of_item,
+            manufacturer,
+            asin,
+            date_first_available,
         } = req.body;
         let data = await db.updateMany(
             { _id: req.params.id },
@@ -125,6 +137,10 @@ const Putdata = async (req, res) => {
                     colour,
                     screenSize,
                     about_this_item,
+                    type_of_item,
+                    manufacturer,
+                    asin,
+                    date_first_available,
                 },
             }
         );
