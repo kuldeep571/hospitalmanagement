@@ -62,6 +62,21 @@ const SoftwareSchema = mongoose.Schema({
     },
     about_this_item:{
         type: String,
+    },
+    product_dimensions:{
+        type: String,
+    },
+    item_model_number:{
+        type: String,
+    },
+    manufacturer:{
+        type: String,
+    },
+    asin:{
+        type: String,
+    },
+    date_first_available:{
+        type: String,
     }
 
 }, { timestamps: true })
