@@ -77,6 +77,9 @@ const SoftwareSchema = mongoose.Schema({
     },
     date_first_available:{
         type: String,
+    },
+    item_weight:{
+        type: String,
     }
 
 }, { timestamps: true })
