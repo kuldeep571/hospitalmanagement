@@ -3,7 +3,6 @@ const newproSchema = mongoose.Schema({
 
     image: {
         type: String,
-        required: true,
     },
     rating: {
         type: String,
@@ -13,94 +12,80 @@ const newproSchema = mongoose.Schema({
     },
     image1: {
         type: String,
-        required: true,
     },
     image2: {
         type: String,
-        required: true,
     },
     image3: {
         type: String,
-        required: true,
     },
     image4: {
         type: String,
-        required: true,
     },
     name: {
         type: String,
-        required: true,
     },
     price: {
         type: String,
-        required: true,
     },
     brand: {
         type: String,
-        required: true,
     },
     description: {
         type: String,
-        required: true,
     },
     category: {
         type: String,
-        required: true,
     },
     cuttedprice: {
         type: String,
-        required: true,
     },
-    modelName:{
-        type: String,
-        required:true,
-    },
-    style:{
-        type: String,
-        required:true,
-    },
-    colour:{
-        type: String,
-        required:true,
-    },
-    screenSize:{
-        type: String,
-        required:true,
-    },
-    about_this_item:{
+    modelName: {
         type: String,
     },
-    processor_brand:{
+    style: {
         type: String,
     },
-    processor_type:{
+    colour: {
         type: String,
     },
-    processor_speed:{
+    screenSize: {
         type: String,
     },
-    processor_count:{
+    about_this_item: {
         type: String,
     },
-    ram_size:{
+    processor_brand: {
         type: String,
     },
-    memory_technology:{
+    processor_type: {
         type: String,
     },
-    maximum_memory_supported:{
+    processor_speed: {
         type: String,
     },
-    graphics_chipset_brand:{
+    processor_count: {
         type: String,
     },
-    graphics_card_description:{
+    ram_size: {
         type: String,
     },
-    graphics_ram_type:{
+    memory_technology: {
         type: String,
     },
-    graphics_card_interface:{
+    maximum_memory_supported: {
+        type: String,
+    },
+    graphics_chipset_brand: {
+        type: String,
+    },
+    graphics_card_description: {
+        type: String,
+    },
+    graphics_ram_type: {
+        type: String,
+    },
+    graphics_card_interface: {
         type: String,
     }
 

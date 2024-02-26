@@ -3,7 +3,6 @@ const newproSchema = mongoose.Schema({
 
     image: {
         type: String,
-        required: true,
     },
     rating: {
         type: String,
@@ -13,61 +12,47 @@ const newproSchema = mongoose.Schema({
     },
     image1: {
         type: String,
-        required: true,
     },
     image2: {
         type: String,
-        required: true,
     },
     image3: {
         type: String,
-        required: true,
     },
     image4: {
         type: String,
-        required: true,
     },
     name: {
         type: String,
-        required: true,
     },
     price: {
         type: Number,
-        required: true,
     },
     brand: {
         type: String,
-        required: true,
     },
     description: {
         type: String,
-        required: true,
     },
     category: {
         type: String,
-        required: true,
     },
     cuttedprice: {
         type: Number,
-        required: true,
     },
-    modelName:{
+    modelName: {
         type: String,
-        required:true,
     },
-    style:{
+    style: {
         type: String,
-        required:true,
     },
-    colour:{
+    colour: {
         type: String,
-        required:true,
     },
-    screenSize:{
+    screenSize: {
         type: String,
-        required:true,
     },
-    about_this_item:{
+    about_this_item: {
         type: String,
     }
 

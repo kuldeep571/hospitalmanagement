@@ -37,56 +37,52 @@ const ProductSchema = mongoose.Schema({
     rating: {
         type: String,
     },
-    modelName:{
-        type: String,
-        required:true,
-    },
-    style:{
-        type: String,
-        required:true,
-    },
-    colour:{
-        type: String,
-        required:true,
-    },
-    screenSize:{
-        type: String,
-        required:true,
-    },
-    about_this_item:{
+    modelName: {
         type: String,
     },
-    manufacturer:{
+    style: {
         type: String,
     },
-    asin:{
+    colour: {
         type: String,
     },
-    voltage:{
+    screenSize: {
         type: String,
     },
-    item_weight:{
+    about_this_item: {
         type: String,
     },
-    special_feature:{
+    manufacturer: {
         type: String,
     },
-    speaker_type:{
+    asin: {
         type: String,
     },
-    wattage:{
+    voltage: {
         type: String,
     },
-    standing_screen_display_size:{
+    item_weight: {
         type: String,
     },
-    aspect_ratio:{
+    special_feature: {
         type: String,
     },
-    memory_storage_capacity:{
+    speaker_type: {
         type: String,
     },
-    ram_memory_installed_size:{
+    wattage: {
+        type: String,
+    },
+    standing_screen_display_size: {
+        type: String,
+    },
+    aspect_ratio: {
+        type: String,
+    },
+    memory_storage_capacity: {
+        type: String,
+    },
+    ram_memory_installed_size: {
         type: String,
     }
 

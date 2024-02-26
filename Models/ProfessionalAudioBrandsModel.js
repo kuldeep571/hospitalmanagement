@@ -3,69 +3,56 @@ const ProfessionalAudioBrandSchema = mongoose.Schema({
 
     image: {
         type: String,
-        required: true,
     },
     video: {
         type: String,
     },
     image1: {
         type: String,
-        required: true,
     },
     image2: {
         type: String,
-        required: true,
     },
     image3: {
         type: String,
-        required: true,
     },
     image4: {
         type: String,
-        required: true,
     },
     name: {
         type: String,
-        required: true,
     },
     price: {
         type: String,
-        required: true,
     },
     brand: {
         type: String,
-        required: true,
     },
     description: {
         type: String,
-        required: true,
     },
-    rating:{
+    rating: {
         type: String,
-        required:true,
     },
     category: {
         type: String,
-        required: true,
     },
     cuttedprice: {
         type: String,
-        required: true,
     },
-    modelName:{
+    modelName: {
         type: String,
     },
-    style:{
+    style: {
         type: String,
     },
-    colour:{
-        type: String,
-        required:true,
-    },
-    screenSize:{
+    colour: {
         type: String,
     },
-    about_this_item:{
+    screenSize: {
+        type: String,
+    },
+    about_this_item: {
         type: String,
     }
 
