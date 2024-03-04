@@ -5,7 +5,7 @@ const {
     getsingle,
     deletedata,
     update
-}=require("../Controllers/SallerController");
+} = require("../Controllers/SallerController");
 
 const router = express.Router();
 
