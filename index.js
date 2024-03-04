@@ -73,6 +73,8 @@ app.use("/api/personalcomputer", require("./Routers/PersonalComputerRouter"));
 
 app.use("/api/ProfessionalAudioBrand", require("./Routers/ProfessionalAudioBrandsRouter"));
 
+app.use("/api/saller", require("./Routers/SallerRouter"));
+
 
 app.listen(PORT, () => {
   console.log(`Hospital Server is running  at PORT ${PORT}`);
